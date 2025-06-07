@@ -45,11 +45,12 @@ body{
     
 }
 
-.play{
+.game-result{
     font-size:25px;
     margin-bottom:50px;
     margin-top:50px;
 }
+
 
 .choices-display{
     font-size:15px;
