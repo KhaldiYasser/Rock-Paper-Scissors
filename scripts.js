@@ -12,7 +12,7 @@ let Score=JSON.parse(localStorage.getItem('Score'))||{
 };
 
 
-
+scoreBoard.innerHTML = `win: ${Score.WinNumber} .Loss : ${Score.LossNumber}.Tie : ${Score.TieNumber}`;
 
 function ComputerChoice(){
 
@@ -102,19 +102,19 @@ function determineResult(humanChoice,computerChoice){
 
 
 
-function restoreScore(){
-    Score.LossNumber=0;
-    Score.TieNumber=0;
-    Score.WinNumber=0;
+function restoreScore() {
+    Score.LossNumber = 0;
+    Score.TieNumber = 0;
+    Score.WinNumber = 0;
 
-scoreElement.innerHTML=`win: ${Score.WinNumber}  .Loss : ${Score.LossNumber}.Tie : ${Score.TieNumber} `;
+  scoreBoard.innerHTML = `win: ${Score.WinNumber} .Loss : ${Score.LossNumber}.Tie : ${Score.TieNumber}`;
 
-localStorage.removeItem("Score");
-  
+
+    localStorage.setItem("Score", JSON.stringify(Score));
 }
 
 
 
-
 localStorage.setItem("Score",JSON.stringify(Score));
+ 
  
